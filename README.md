@@ -1,14 +1,14 @@
 # Data_Project_S4_Kohnke_Gharnaout
-[cite_start]**Course:** Databases 1: Basic Concepts [cite: 30]
-[cite_start]**Team Members:** [Your Name] & [Your Friend's Name] [cite: 32]
-[cite_start]**Chosen Field:** Esports and Competitive Tactical Shooter Tracking [cite: 9]
+**Course:** Databases 1: Basic Concepts
+**Team Members:** [Your Name] & [Your Friend's Name]
+**Chosen Field:** Esports and Competitive Tactical Shooter Tracking
 
 ---
 
-## [cite_start]Part I: Requirements Analysis [cite: 44, 45]
+## Part I: Requirements Analysis
 
-### [cite_start]1. Prompt Used (RICARDO Framework) [cite: 53, 74]
-[cite_start]To gather our requirements, we used the following prompt structured with the RICARDO framework[cite: 53]:
+### 1. Prompt Used (RICARDO Framework)
+To gather our requirements, we used the following prompt structured with the RICARDO framework:
 
 **Role**
 You are a Senior Database Architect specializing in esports data analysis and competitive video game tracking platforms.
@@ -36,7 +36,7 @@ The ultimate objective is to provide the foundational requirements to build an M
 
 ---
 
-### [cite_start]2. AI Output: Business Rules [cite: 74, 99]
+### 2. AI Output: Business Rules
 1. A player is uniquely identified by a Player ID and possesses a unique in-game alias.
 2. A player can be contracted to zero or one esports team at any given time.
 3. An esports team must have at least one, and can have multiple, players on its active roster.
@@ -55,7 +55,7 @@ The ultimate objective is to provide the foundational requirements to build an M
 
 ---
 
-### [cite_start]3. AI Output: Data Dictionary [cite: 74, 99]
+### 3. AI Output: Data Dictionary
 
 | Entity Name | Attribute Name | Data Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -81,19 +81,19 @@ The ultimate objective is to provide the foundational requirements to build an M
 | **Round** | `Round_Number` | INT | The sequential number of the round (part of Weak Entity Composite PK). |
 | **Round** | `Winning_Team_ID`| INT | The ID of the team that secured the victory for that specific round. |
 
-[cite_start]*(Note: The data dictionary output perfectly matched our requirements, so no manual removals were necessary[cite: 71, 72].)*
+*(Note: The data dictionary output perfectly matched our requirements, so no manual removals were necessary.)*
 
 ---
 
-## [cite_start]Part II: Conceptual Data Model (MCD) [cite: 81]
+## Part II: Conceptual Data Model (MCD)
 
-[cite_start]Below is the image of our MCD produced using our modeling software[cite: 84, 94]. 
+Below is the image of our MCD produced using our modeling software. 
 
 ![MCD Diagram](./mcd_diagram.png) 
 *(Note to team: Le screen doit être nommé 'mcd_diagram.png' and mit dans le même folder que le README, sinon il pourra pas être reconnu, t'as juste à mettre le fichier dans le repo et il devrait être reconnu direct)*
 
-### [cite_start]Advanced Modeling Elements Included [cite: 87]
-[cite_start]Our MCD successfully integrates the required advanced modeling elements[cite: 87]:
-1. [cite_start]**Recursive Relationship:** A `Mentors` relationship on the **Player** entity to track veteran players guiding rookies[cite: 88].
-2. [cite_start]**N-ary Relationship (n>2):** A `Match_Context` ternary relationship connecting **Match_Event**, **Tournament**, and **Map**[cite: 89].
-3. [cite_start]**Weak/Strong Entity:** A `Has_Rounds` relative identification relationship where **Round** is a weak entity relying entirely on the strong entity **Match_Event**[cite: 90].
+### Advanced Modeling Elements Included
+Our MCD successfully integrates the required advanced modeling elements:
+1. **Recursive Relationship:** A `Mentors` relationship on the **Player** entity to track veteran players guiding rookies.
+2. **N-ary Relationship (n>2):** A `Match_Context` ternary relationship connecting **Match_Event**, **Tournament**, and **Map**.
+3. **Weak/Strong Entity:** A `Has_Rounds` relative identification relationship where **Round** is a weak entity relying entirely on the strong entity **Match_Event**.
