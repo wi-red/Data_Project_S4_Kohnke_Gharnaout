@@ -1,6 +1,6 @@
 # Data_Project_S4_Kohnke_Gharnaout
 **Course:** Databases 1: Basic Concepts
-**Team Members:** [Your Name] & [Your Friend's Name]
+**Team Members:** KOHNKE Romain & GHARNAOUT Samy
 **Chosen Field:** Esports and Competitive Tactical Shooter Tracking
 
 ---
@@ -90,10 +90,22 @@ The ultimate objective is to provide the foundational requirements to build an M
 Below is the image of our MCD produced using our modeling software. 
 
 ![MCD Diagram](./mcd_diagram.png) 
-*(Note to team: Le screen doit être nommé 'mcd_diagram.png' and mit dans le même folder que le README, sinon il pourra pas être reconnu, t'as juste à mettre le fichier dans le repo et il devrait être reconnu direct)*
+
 
 ### Advanced Modeling Elements Included
 Our MCD successfully integrates the required advanced modeling elements:
 1. **Recursive Relationship:** A `Mentors` relationship on the **Player** entity to track veteran players guiding rookies.
 2. **N-ary Relationship (n>2):** A `Match_Context` ternary relationship connecting **Match_Event**, **Tournament**, and **Map**.
 3. **Weak/Strong Entity:** A `Has_Rounds` relative identification relationship where **Round** is a weak entity relying entirely on the strong entity **Match_Event**.
+
+---
+
+## Part III: Usage Scenario & Data Insertion
+
+### Usage Scenario: Esports Data Analyst
+**Role:** Head Data Analyst for a professional esports organization.
+**Purpose:** The analyst uses this database to scout opposing teams, evaluate player performance trends across different maps, and prepare strategic briefings ahead of major tournaments. 
+**Data Extracted:** The analyst extracts average round win rates on specific maps, identifies which players have the highest performance metrics when acting as mentors, finds teams that consistently reach the finals of tier-1 tournaments, and isolates weak points in opponents' map pools.
+
+### AI Prompt Used for Data Generation
+"Act as a SQL data generator. I have a database for an esports tracking platform with the following tables: Team (id_team, Team_Name, Region), Player (id_player, Alias, Real_Name, id_team, id_mentor), Tournament (id_tournament, Tourney_Name, Start_Date), Map (id_map, Map_Name), Registers_For (id_team, id_tournament), Match_Event (id_match, id_tournament, id_team, id_map, Final_Score), and Round_number (id_match, id_round, Winning_Team_ID). Generate realistic INSERT statements for each table using valid competitive tactical shooter data (like CS2 or Valorant). Ensure foreign key constraints are respected."
