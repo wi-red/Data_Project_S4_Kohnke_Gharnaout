@@ -1,7 +1,7 @@
 # Data_Project_S4_Kohnke_Gharnaout
 **Course:** Databases 1: Basic Concepts
 **Team Members:** KOHNKE Romain & GHARNAOUT Samy
-**Chosen Field:** Esports and Competitive Tactical Shooter Tracking
+\ **Chosen Field:** Esports and Competitive Tactical Shooter Tracking
 
 ---
 
